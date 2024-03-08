@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cr8tw0b3vj63h"]
+
+[ext_resource type="Script" path="res://road/road_background.gd" id="1_8yvl0"]
+[ext_resource type="Texture2D" uid="uid://dtxr57fv2gbyr" path="res://images/Road/road.png" id="2_olxy1"]
+
+[node name="RoadBackground" type="ParallaxBackground"]
+script = ExtResource("1_8yvl0")
+
+[node name="RoadLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(0, 960)
+
+[node name="Road" type="TextureRect" parent="RoadLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_olxy1")
