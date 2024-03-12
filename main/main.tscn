@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://yxisc3rbbqc6"]
+
+[ext_resource type="PackedScene" uid="uid://cr8tw0b3vj63h" path="res://road/road_background.tscn" id="1_4qtw6"]
+[ext_resource type="Script" path="res://main/main.gd" id="1_i6rrg"]
+[ext_resource type="PackedScene" uid="uid://l3qoxet3h4hk" path="res://car_player/car_player.tscn" id="2_mhvr0"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_i6rrg")
+
+[node name="RoadBackground" parent="." instance=ExtResource("1_4qtw6")]
+
+[node name="CarPlayer" parent="." instance=ExtResource("2_mhvr0")]
+position = Vector2(272, 861)
+
+[node name="LeftBoundaryMarker" type="Marker2D" parent="."]
+position = Vector2(147, 854)
+
+[node name="RightBoundaryMarker" type="Marker2D" parent="."]
+position = Vector2(392, 854)

@@ -29,5 +29,8 @@ func _input(event):
 				target_position.x -= move_speed
 			else:
 				target_position.x += move_speed
+				
+			#ensure that the car doesn't move off-screen
+			target_position.x = clamp(target_position.x,posx_left_boundary,posx_right_boundary)
 			
 			
