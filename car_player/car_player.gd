@@ -14,7 +14,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	#smoothly move the car towards the target position
+	position.x = lerp(position.x,target_position.x,interp_speed*delta)
 	
 func _input(event):	
 	if event is InputEventScreenTouch or event is InputEventMouseButton:
@@ -29,4 +30,4 @@ func _input(event):
 			else:
 				target_position.x += move_speed
 			
-			position.x = target_position.x
+			
